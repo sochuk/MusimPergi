@@ -31,6 +31,7 @@ export class TabsPage {
     this.tab1Root = HomePage;
     this.tab2Root = AboutPage;
   }
+  
   ionViewDidLoad() {
     return this.variable = false;
     //check apakah sudah dalam kondisi login?
