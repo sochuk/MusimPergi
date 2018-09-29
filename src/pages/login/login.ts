@@ -42,7 +42,7 @@ export class LoginPage {
       //this.userDetails = JSON.parse(this.responseData);;
       console.log(this.responseData.data.user.full_name);
       //this.navCtrl.push(HomePage);
-       this.navCtrl.push(TabsPage);
+       this.navCtrl.setRoot(TabsPage);
        }
        else{ this.showToastWrongUserNameOrPassword(); }  }, (err) => {
         // Error log
@@ -52,14 +52,7 @@ export class LoginPage {
 
   }
   
-  ionViewDidLoad() {
-    //check apakah sudah dalam kondisi login?
-    let status = JSON.parse(localStorage.getItem('userData'));
-    if (status != null) {
-      this.navCtrl.setRoot(ContactPage);
-   
-  }
-}
+
   showToastWrongUserNameOrPassword() {
     let toast = this.toastCtrl.create({
       message: 'Kesalahan Username Atau Password',

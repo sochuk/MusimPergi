@@ -19,15 +19,30 @@ export class TabsPage {
  
   constructor(navParams: NavParams, public navCtrl : NavController) {
     
-    let status = JSON.parse(localStorage.getItem('userData'));
-    if (status != null) {
-        this.variable = true;
-    }else if(status == null){
-        this.variable = false;
-    }
-    this.tab3Root = this.variable?ContactPage:LoginPage;
+    // let status = JSON.parse(localStorage.getItem('userData'));
+    // if (status != null) {
+    //     this.variable = true;
+    // }else if(status == null){
+    //     this.variable = false;
+    // }
+    console.log("STATUS LOGI : "+ this.ionViewDidLoad());
+
+    this.tab3Root = this.ionViewDidLoad()?ContactPage:LoginPage;
     this.tab1Root = HomePage;
     this.tab2Root = AboutPage;
   }
- 
+  ionViewDidLoad() {
+    return this.variable = false;
+    //check apakah sudah dalam kondisi login?
+    let status = JSON.parse(localStorage.getItem('userData'));
+    if (status != null) {
+      this.variable = true;
+    }else 
+      {
+        this.variable = false;
+      }
+   
+    }
 }
+ 
+
