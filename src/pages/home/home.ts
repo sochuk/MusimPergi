@@ -7,14 +7,21 @@ import { AuthService } from '../../providers/auth-service/auth-service';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  orientation: string
   postData : any;
-  constructor(public navCtrl: NavController, public authService:AuthService) {
+  constructor(public navCtrl: NavController,
+              public authService:AuthService) {
+              
   //   let status = JSON.parse(localStorage.getItem('userData'));
   //   if (status != null) {
   //   this.postData = JSON.parse(localStorage.getItem('userData'));
   // }else if(status == null){
   //   this.postData = null;
   // }
-}
+  }
+
+  ionViewDidLoad(){
+   
+  }
 
 }
