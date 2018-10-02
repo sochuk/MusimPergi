@@ -25,14 +25,15 @@ export class TabsPage {
     // }else if(status == null){
     //     this.variable = false;
     // }
-    console.log("STATUS LOGI : "+ this.ionViewDidLoad());
+    // console.log("STATUS LOGI : "+ this.ionViewDidLoad());
 
-    this.tab3Root = this.ionViewDidLoad()?ContactPage:LoginPage;
+    // this.tab3Root = this.ionViewDidLoad()?ContactPage:LoginPage;
+    this.tab3Root = LoginPage;
     this.tab1Root = HomePage;
     this.tab2Root = AboutPage;
   }
   
-  ionViewDidLoad() {
+  // ionViewDidLoad() {
     // return this.variable = false;
     // //check apakah sudah dalam kondisi login?
     // let status = JSON.parse(localStorage.getItem('userData'));
@@ -43,7 +44,7 @@ export class TabsPage {
     //     this.variable = false;
     //   }
    
-    }
+    // }
 }
  
 
