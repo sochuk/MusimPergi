@@ -33,15 +33,15 @@ export class TabsPage {
   }
   
   ionViewDidLoad() {
-    return this.variable = false;
-    //check apakah sudah dalam kondisi login?
-    let status = JSON.parse(localStorage.getItem('userData'));
-    if (status != null) {
-      this.variable = true;
-    }else 
-      {
-        this.variable = false;
-      }
+    // return this.variable = false;
+    // //check apakah sudah dalam kondisi login?
+    // let status = JSON.parse(localStorage.getItem('userData'));
+    // if (status != null) {
+    //   this.variable = true;
+    // }else 
+    //   {
+    //     this.variable = false;
+    //   }
    
     }
 }
